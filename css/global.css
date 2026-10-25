@@ -1,0 +1,139 @@
+:root {
+  --blue-primary: #0b1c2d;
+  --pink-accent: #e91e63;
+  --purple-accent: #7c3aed;
+
+  --bg-light: #f9f9fb;
+  --text-dark: #1f1f1f;
+  --text-muted: #6b6b6b;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+.navbar.scrolled {
+  position: fixed;
+  background: rgba(60, 0, 90, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/* NAVBAR */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 20px 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+    background: linear-gradient(90deg, #374ead, #5240c5, #59c3f1);
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-btn {
+  padding: 8px 16px;
+  background: #ff2f7d;
+  border-radius: 20px;
+  color: #fff !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 47, 125, 0.4);
+}
+
+
+.navbar.scrolled {
+  position: fixed;
+  background: rgba(60, 0, 90, 0.95);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+.nav-links a:hover {
+  color: #ff2f7d;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(60, 0, 90, 0.95);
+    display: none;
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
